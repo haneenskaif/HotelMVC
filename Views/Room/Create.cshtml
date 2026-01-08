@@ -1,6 +1,10 @@
 ﻿@model HotelMVC.Models.Room
 
 <h2>Add Room</h2>
+<div style="max-width:450px; margin:40px auto; padding:20px;
+            border-radius:10px; box-shadow:0 0 10px #ddd;">
+
+    <h3 style="color:#6f42c1; text-align:center;">Add New Room</h3>
 
 @using (Html.BeginForm())
 {
@@ -20,6 +24,12 @@
     </div>
 
     <br />
-    <input type="submit" value="Save" />
+        <input type="submit" value="Save"
+               style="background:#6f42c1; color:white;
+                  border:none; padding:10px 18px;
+                  border-radius:8px; cursor:pointer;" />
+
 }
+</div>
+
 

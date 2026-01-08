@@ -24,10 +24,12 @@ namespace HotelMVC.Controllers
             room.RoomId = rooms.Count + 1;
             room.Status = "Available";
             rooms.Add(room);
+            TempData["msg"] = "Room added successfully!";
             return RedirectToAction("Index");
 
+
         }
-       
+
     }
 }
 

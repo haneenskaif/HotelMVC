@@ -1,4 +1,12 @@
 ﻿@model List<HotelMVC.Models.Room>
+@if (TempData["msg"] != null)
+{
+    <div style="background:#d1e7dd; color:#0f5132;
+                    padding:10px; border-radius:8px;
+                    margin-bottom:15px;">
+        @TempData["msg"]
+    </div>
+}
 
 <h2>Room List</h2>
 
