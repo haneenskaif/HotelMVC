@@ -1,0 +1,25 @@
+﻿@model HotelMVC.Models.Customer
+
+<h2>Add Customer</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <label>Name</label><br />
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+
+    <div>
+        <label>Phone</label><br />
+        @Html.TextBoxFor(m => m.Phone)
+    </div>
+
+    <div>
+        <label>Email</label><br />
+        @Html.TextBoxFor(m => m.Email)
+    </div>
+
+    <br />
+    <input type="submit" value="Save" />
+}
+

@@ -1,0 +1,13 @@
+﻿@model List<HotelMVC.Models.Customer>
+
+<h2>Customer List</h2>
+
+<ul>
+    @foreach (var c in Model)
+    {
+        <li>@c.Name - @c.Phone</li>
+    }
+</ul>
+
+<a href="/Customer/Create">Add New Customer</a>
+

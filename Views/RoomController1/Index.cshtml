@@ -1,0 +1,26 @@
+﻿@model List<HotelMVC.Models.Room>
+
+<h2>Room List</h2>
+
+<table border="1">
+    <tr>
+        <th>Number</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var r in Model)
+    {
+        <tr>
+            <td>@r.RoomNumber</td>
+            <td>@r.Type</td>
+            <td>@r.Price</td>
+            <td>@r.Status</td>
+        </tr>
+    }
+</table>
+
+<br />
+<a href="/Room/Create">Add New Room</a>
+

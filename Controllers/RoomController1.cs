@@ -1,0 +1,30 @@
+﻿using HotelMVC.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace HotelMVC.Controllers
+{
+    public class RoomController1 : Controller
+    {
+        static List<Room> rooms = new List<Room>();
+
+        public ActionResult Index()
+        {
+            return View(rooms);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Room room)
+        {
+            room.RoomId = rooms.Count + 1;
+            room.Status = "Available";
+            rooms.Add(room);
+            return RedirectToAction("Index");
+        }
+    }
+}
+

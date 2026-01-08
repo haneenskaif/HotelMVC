@@ -1,0 +1,30 @@
+﻿@model HotelMVC.Models.Booking
+
+<h2>Create Booking</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <label>Customer ID</label><br />
+        @Html.TextBoxFor(m => m.CustomerId)
+    </div>
+
+    <div>
+        <label>Room ID</label><br />
+        @Html.TextBoxFor(m => m.RoomId)
+    </div>
+
+    <div>
+        <label>Check In Date</label><br />
+        @Html.TextBoxFor(m => m.CheckInDate)
+    </div>
+
+    <div>
+        <label>Check Out Date</label><br />
+        @Html.TextBoxFor(m => m.CheckOutDate)
+    </div>
+
+    <br />
+    <input type="submit" value="Book" />
+}
+
