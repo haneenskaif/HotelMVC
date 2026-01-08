@@ -20,13 +20,36 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li>@Html.ActionLink("Rooms", "Index", "Room")</li>
-                        <li>@Html.ActionLink("Add Room", "Create", "Room")</li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Room" asp-action="Index">
+                                Rooms
+                            </a>
+                        </li>
 
-                        <li>@Html.ActionLink("Customers", "Index", "Customer")</li>
-                        <li>@Html.ActionLink("Add Customer", "Create", "Customer")</li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Room" asp-action="Create">
+                                Add Room
+                            </a>
+                        </li>
 
-                        <li>@Html.ActionLink("Booking", "Create", "Booking")</li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Customer" asp-action="Index">
+                                Customers
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Customer" asp-action="Create">
+                                Add Customer
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Booking" asp-action="Create">
+                                Booking
+                            </a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
