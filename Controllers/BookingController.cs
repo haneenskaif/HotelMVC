@@ -1,9 +1,10 @@
-﻿using HotelMVC.Models;
+﻿using System.Collections.Generic;
+using HotelMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelMVC.Controllers
 {
-    public class BookingController1 : Controller
+    public class BookingController : Controller
     {
         static List<Booking> bookings = new List<Booking>();
 
@@ -22,13 +23,16 @@ namespace HotelMVC.Controllers
 
             bookings.Add(booking);
 
-            return RedirectToAction("Receipt", booking);
+            return RedirectToAction("Receipt", new { bookingId = booking.BookingId });
+
         }
 
-        public ActionResult Receipt(Booking booking)
+        public ActionResult Receipt(int bookingId)
         {
+            var booking = bookings.FirstOrDefault(b => b.BookingId == bookingId);
             return View(booking);
         }
+
     }
 
 }

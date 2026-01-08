@@ -1,9 +1,10 @@
-﻿using HotelMVC.Models;
+﻿using System.Collections.Generic;
+using HotelMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelMVC.Controllers
 {
-    public class CustomerController1 : Controller
+    public class CustomerController : Controller
     {
         static List<Customer> customers = new List<Customer>();
 

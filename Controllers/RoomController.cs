@@ -1,9 +1,10 @@
-﻿using HotelMVC.Models;
+﻿using System.Collections.Generic;
+using HotelMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelMVC.Controllers
 {
-    public class RoomController1 : Controller
+    public class RoomController : Controller
     {
         static List<Room> rooms = new List<Room>();
 
@@ -24,7 +25,9 @@ namespace HotelMVC.Controllers
             room.Status = "Available";
             rooms.Add(room);
             return RedirectToAction("Index");
+
         }
+       
     }
 }
 
