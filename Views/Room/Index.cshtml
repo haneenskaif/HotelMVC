@@ -9,25 +9,35 @@
 }
 
 <h2>Room List</h2>
-
-<table border="1">
-    <tr>
-        <th>Number</th>
-        <th>Type</th>
-        <th>Price</th>
-        <th>Status</th>
-    </tr>
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
 
     @foreach (var r in Model)
     {
-        <tr>
-            <td>@r.RoomNumber</td>
-            <td>@r.Type</td>
-            <td>@r.Price</td>
-            <td>@r.Status</td>
-        </tr>
+        <div style="width:220px; padding:15px;
+                    border-radius:12px;
+                    box-shadow:0 0 10px #ddd;
+                    border-top:5px solid #6f42c1;">
+
+            <h4 style="color:#6f42c1;">Room @r.RoomNumber</h4>
+
+            <p><b>Type:</b> @r.Type</p>
+            <p><b>Price:</b> @r.Price</p>
+
+            <p>
+                <b>Status:</b>
+                @if (r.Status == "Available")
+                {
+                    <span style="color:green;">Available</span>
+                }
+                else
+                {
+                    <span style="color:red;">Booked</span>
+                }
+            </p>
+        </div>
     }
-</table>
+</div>
+
 
 <br />
 <a href="/Room/Create">Add New Room</a>

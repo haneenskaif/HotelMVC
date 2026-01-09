@@ -2,12 +2,27 @@
 
 <h2>Customer List</h2>
 
-<ul>
-    @foreach (var c in Model)
-    {
-        <li>@c.Name - @c.Phone</li>
-    }
-</ul>
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
 
-<a href="/Customer/Create">Add New Customer</a>
+@foreach (var c in Model)
+{
+    <div style="width:220px; padding:15px;
+                border-radius:12px;
+                box-shadow:0 0 10px #ddd;
+                border-top:5px solid #6f42c1;">
+
+        <h4 style="color:#6f42c1;">@c.Name</h4>
+
+        <p><b>Phone:</b> @c.Phone</p>
+        <p><b>Email:</b> @c.Email</p>
+    </div>
+}
+</div>
+
+<br />
+
+<a href="/Customer/Create"
+   style="color:#6f42c1; font-weight:bold; text-decoration:none;">
+   + Add New Customer
+</a>
 
